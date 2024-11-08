@@ -45,7 +45,6 @@
 
 ## 📚 Project Structure
 
-```plaintext
 ```
 └── 📁map-me
     └── 📁.git
@@ -76,15 +75,10 @@
     └── tailwind.config.ts
     └── tsconfig.json
 ```
-```
 
 ## 🔧 Installation & Usage
 
 Follow the steps in the **Quick Start** section above to run MapMe locally. Once the server is up, you can start creating, editing, and managing your tasks right from the web interface.
-
-## 📸 Screenshots
-
-> *Coming Soon!*
 
 ---
 
