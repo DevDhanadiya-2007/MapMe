@@ -1,6 +1,5 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { FC, ReactNode } from "react";
-
 interface ChakraProviderWrapperProps {
     children: ReactNode
 }
@@ -9,7 +8,7 @@ interface ChakraProviderWrapperProps {
 
 const ChakraProviderWrapper: FC<ChakraProviderWrapperProps> = ({ children }) => {
     return (
-        <ChakraProvider >
+        <ChakraProvider>
             {children}
         </ChakraProvider>
     )
