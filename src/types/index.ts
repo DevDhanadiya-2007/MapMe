@@ -1,12 +1,17 @@
-import { ReactNode, ReactElement, JSXElementConstructor } from "react"
+import { ReactNode } from "react";
 
-type GlowingButtonProps = {
-    children: ReactNode,
-    icon: ReactElement<any, string | JSXElementConstructor<any>> | undefined,
-    [key: string]: any
-    'aria-label': string
+interface ChildrenWrapperProps {
+    children: ReactNode
+}
+
+interface GlowingButtonProps {
+    children: React.ReactNode;
+    icon: React.ReactElement;
+    'aria-label': string;
+    onClick?: () => void
 }
 
 export type {
+    ChildrenWrapperProps,
     GlowingButtonProps
 }

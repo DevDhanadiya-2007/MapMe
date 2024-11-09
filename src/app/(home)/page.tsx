@@ -66,7 +66,7 @@ export default function HomePage() {
               </Text>
               <Button
                 as={Link}
-                href="/auth/register"
+                href="/auth"
                 size="lg"
                 colorScheme="purple"
                 rightIcon={<MapPin />}
@@ -185,7 +185,7 @@ export default function HomePage() {
             </Text>
             <Button
               as={Link}
-              href="/auth/register"
+              href="/auth"
               size="lg"
               colorScheme="purple"
               rightIcon={<MapPin />}

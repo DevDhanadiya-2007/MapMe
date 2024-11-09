@@ -1,14 +1,13 @@
+"use client"
+
 import { ChakraProvider } from "@chakra-ui/react";
-import { FC, ReactNode } from "react";
-interface ChakraProviderWrapperProps {
-    children: ReactNode
-}
+import { FC } from "react";
+import { ChildrenWrapperProps } from "@/types";
+import theme from "@/styles/theme";
 
-
-
-const ChakraProviderWrapper: FC<ChakraProviderWrapperProps> = ({ children }) => {
+const ChakraProviderWrapper: FC<ChildrenWrapperProps> = ({ children }) => {
     return (
-        <ChakraProvider>
+        <ChakraProvider theme={theme}>
             {children}
         </ChakraProvider>
     )

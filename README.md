@@ -14,7 +14,7 @@
 
 1. **Clone the repository**:  
    ```bash
-   git clone https://github.com/yourusername/MapMe.git
+   git clone https://github.com/DevDhanadiya-2007/MapMe.git
    ```
 2. **Install dependencies**:  
    ```bash

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import ChakraProviderWrapper from "@/providers/ChakraProviderWrapper";
+import NextAuthSessionProvider from "@/providers/NextAuthSessionProvider";
 
 export const metadata: Metadata = {
   title: "MapMe",
@@ -15,9 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ChakraProviderWrapper>
-          {children}
-        </ChakraProviderWrapper>
+        <NextAuthSessionProvider>
+          <ChakraProviderWrapper>
+            {children}
+          </ChakraProviderWrapper>
+        </NextAuthSessionProvider>
       </body>
     </html>
   );
