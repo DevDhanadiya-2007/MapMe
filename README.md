@@ -46,26 +46,43 @@
 ## 📚 Project Structure
 
 ```
-└── 📁map-me
-    └── 📁.git
+└── 📁MapMe
+    └── 📁prisma
+        └── schema.prisma
     └── 📁src
         └── 📁app
             └── 📁(home)
                 └── page.tsx
+            └── 📁api
+                └── 📁auth
+                    └── 📁[...nextauth]
+                        └── route.ts
             └── 📁auth
-                └── 📁login
-                    └── page.tsx
-                └── 📁register
-                    └── page.tsx
+                └── page.tsx
             └── favicon.ico
             └── layout.tsx
+        └── 📁components
+            └── 📁ui
+                └── 📁backgrounds
+                    └── Auth-Background.tsx
+                └── GlowingButton.tsx
+                └── SkeletonItem.tsx
         └── 📁providers
             └── ChakraProviderWrapper.tsx
+            └── NextAuthSessionProvider.tsx
         └── 📁styles
             └── 📁theme
                 └── index.ts
             └── globals.css
+        └── 📁types
+            └── 📁auth
+                └── index.ts
+            └── index.ts
+            └── next-auth.d.ts
+    └── .env
+    └── .env.example
     └── .gitignore
+    └── LICENSE
     └── next-env.d.ts
     └── next.config.mjs
     └── package.json
