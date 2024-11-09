@@ -10,6 +10,17 @@
 - **Responsive UI** for a seamless experience across devices
 - **Real-time updates** with efficient state management
 
+## 🖼️ Visuals
+
+Here are some screenshots of the MapMe application in action:
+
+### Home
+![Page part 1](public/images/home1.png)
+![Page part 2](public/images/home2.png)
+
+### Authentication Screen
+![Authentication Page](public/images/auth.png)
+
 ## 🚀 Quick Start
 
 1. **Clone the repository**:  
