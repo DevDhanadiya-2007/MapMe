@@ -60,6 +60,11 @@ Here are some screenshots of the MapMe application in action:
 └── 📁MapMe
     └── 📁prisma
         └── schema.prisma
+    └── 📁public
+        └── 📁images
+            └── auth.png
+            └── home1.png
+            └── home2.png
     └── 📁src
         └── 📁app
             └── 📁(home)
@@ -67,6 +72,8 @@ Here are some screenshots of the MapMe application in action:
             └── 📁api
                 └── 📁auth
                     └── 📁[...nextauth]
+                        └── route.ts
+                    └── 📁status
                         └── route.ts
             └── 📁auth
                 └── page.tsx
@@ -76,11 +83,25 @@ Here are some screenshots of the MapMe application in action:
             └── 📁ui
                 └── 📁backgrounds
                     └── Auth-Background.tsx
-                └── GlowingButton.tsx
-                └── SkeletonItem.tsx
+                └── 📁items
+                    └── GlowingButton.tsx
+                    └── Loader.tsx
+                    └── SkeletonItem.tsx
+        └── 📁hooks
+            └── useAuth.ts
         └── 📁providers
-            └── ChakraProviderWrapper.tsx
-            └── NextAuthSessionProvider.tsx
+            └── 📁Root-Provider
+                └── RootLayoutProvider.tsx
+            └── 📁Wrappers
+                └── AuthProvider.tsx
+                └── ChakraUiProvider.tsx
+                └── NextAuthSessionProvider.tsx
+                └── RecoilRootProvider.tsx
+        └── 📁store
+            └── 📁atoms
+                └── index.ts
+            └── 📁selectors
+                └── index.ts
         └── 📁styles
             └── 📁theme
                 └── index.ts
