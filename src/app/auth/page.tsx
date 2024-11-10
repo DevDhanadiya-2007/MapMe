@@ -1,35 +1,23 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { Box, ChakraProvider, Flex, Heading, Text, VStack } from "@chakra-ui/react"
+import { useState } from 'react'
+import { Box, Flex, Heading, Text, VStack } from "@chakra-ui/react"
 import { motion, AnimatePresence } from "framer-motion"
 import { User, Github } from 'lucide-react'
 import { FcGoogle } from "react-icons/fc"
-import GlowingButton from '@/components/ui/GlowingButton'
+import GlowingButton from '@/components/ui/items/GlowingButton'
 import AnimatedBackground from '@/components/ui/backgrounds/Auth-Background'
-import SkeletonItem from '@/components/ui/SkeletonItem'
-import { signIn, useSession } from 'next-auth/react'
+import SkeletonItem from '@/components/ui/items/SkeletonItem'
+import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 
 export default function page() {
-    const [isLoading, setIsLoading] = useState(true)
-    const { data: session, status } = useSession()
+    const [isLoading, setIsLoading] = useState(false)
     const router = useRouter()
 
     const handleSignIn = async (provider: string) => {
         await signIn(provider, { callbackUrl: '/' })
     }
-
-    useEffect(() => {
-        if (status === 'loading') {
-            setIsLoading(true)
-        } else {
-            setIsLoading(false)
-            if (session) {
-                router.push('/')
-            }
-        }
-    }, [session, status, router])
 
     return (
         <Box

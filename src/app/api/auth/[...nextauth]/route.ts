@@ -14,10 +14,21 @@ export const authOptions: AuthOptions = {
             clientSecret: process.env.GITHUB_CLIENT_SECRET!,
         }),
     ],
+    session: {
+        strategy: 'jwt',
+        maxAge: 30 * 24 * 60 * 60, // 30 days
+        updateAge: 60 * 5, // 5 minutes
+    },
+    jwt: {
+        secret: process.env.JWT_SECRET,
+        maxAge: 60 * 15,
+    },
     callbacks: {
         async jwt({ token, account }) {
             if (account) {
                 token.accessToken = account.access_token
+                token.refreshToken = account.refresh_token
+                token.expires = account.expires_at
             }
             return token
         },
@@ -27,8 +38,19 @@ export const authOptions: AuthOptions = {
         },
     },
     pages: {
-        signIn: '/auth',
+        error: '/auth/error',
     },
+    cookies: {
+        sessionToken: {
+            name: `${process.env.NODE_ENV === 'production' ? '__Secure-' : ''}next-auth.session-token`,
+            options: {
+                httpOnly: true,
+                sameSite: 'lax',
+                path: '/',
+                secure: process.env.NODE_ENV === 'production',
+            }
+        }
+    }
 }
 
 const handler = NextAuth(authOptions)

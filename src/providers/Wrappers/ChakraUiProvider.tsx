@@ -5,7 +5,7 @@ import { FC } from "react";
 import { ChildrenWrapperProps } from "@/types";
 import theme from "@/styles/theme";
 
-const ChakraProviderWrapper: FC<ChildrenWrapperProps> = ({ children }) => {
+const ChakraUiProvider: FC<ChildrenWrapperProps> = ({ children }) => {
     return (
         <ChakraProvider theme={theme}>
             {children}
@@ -13,4 +13,4 @@ const ChakraProviderWrapper: FC<ChildrenWrapperProps> = ({ children }) => {
     )
 }
 
-export default ChakraProviderWrapper
+export default ChakraUiProvider
